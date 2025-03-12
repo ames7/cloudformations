@@ -1,5 +1,7 @@
 - name: Deploy ec2 instance on AWS with CloudFormations
   hosts: localhost
+  vars_files:
+    - files/cf_templates.yml
   tasks:
     - name: create a cloudformation stack
       amazon.aws.cloudformation:
