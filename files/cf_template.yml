@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyInstance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: "ami-01366a636bdc16087"
+      InstanceType: "t3.small"
+      KeyName: "id_rsa"
+      SecurityGroupIds:
+        - sg-0eadb6745bba00801
