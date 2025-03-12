@@ -6,6 +6,6 @@
         stack_name: "ansible-cloudformation"
         state: "present"
         region: "us-east-2"
-        template_body: "{{ lookup('file', 'cf_template.yml') }}"
+        template_body: "{{ lookup('('files', 'cf_template.yml') }}"
         tags:
           Stack: "ansible-cloudformation"
