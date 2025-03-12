@@ -1,5 +1,5 @@
 - name: Deploy ec2 instance on AWS with CloudFormations
-  hosts: all
+  hosts: localhost
   tasks:
     - name: create a cloudformation stack
       amazon.aws.cloudformation:
