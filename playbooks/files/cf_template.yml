@@ -8,3 +8,6 @@ Resources:
       KeyName: "id_rsa"
       SecurityGroupIds:
         - sg-0eadb6745bba00801
+      Tags:
+        - Key: 'Name'
+          Value: cf_demo
