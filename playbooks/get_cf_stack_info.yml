@@ -1,0 +1,10 @@
+- name: Get information on CF Stack
+  hosts: localhost
+  tasks:
+    - name: Get summary information about a stack
+      amazon.aws.cloudformation_info:
+        stack_name: ansible-cloudformation
+      register: output
+
+    - debug:
+        msg: "{{ output['cloudformation']['ansible-cloudformation'] }}"
