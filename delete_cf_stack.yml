@@ -1,0 +1,13 @@
+- name: Delete cloudformation stack
+  hosts: localhost
+  vars_files:
+    - files/cf_templates.yml
+  tasks:
+    - name: Delete existing AWS cloudformation stack
+      amazon.aws.cloudformation:
+        stack_name: "ansible-cloudformation"
+        state: "absent"
+        region: "us-east-2"
+        disable_rollback: true
+      tags:
+        - deletestack
